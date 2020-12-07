@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="els2.bergrettung-tirol.com" id="1c71fb48-c800-422d-91cd-2def509ad42c" keyPath="C:\Users\fsi\.ssh\fsi.new.ppk" port="22" nameFormat="DESCRIPTIVE" username="brels" />
+    </configs>
+  </component>
+</project>

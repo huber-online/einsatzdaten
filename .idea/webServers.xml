@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7c9bbd4c-ff2a-4f60-adce-3ce13f4d3f56" name="els2" url="">
+        <fileTransfer rootFolder="/home/brels/jobs" accessType="SFTP" host="els2.bergrettung-tirol.com" port="22" sshConfigId="1c71fb48-c800-422d-91cd-2def509ad42c" sshConfig="brels@els2.bergrettung-tirol.com:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

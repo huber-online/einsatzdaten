@@ -1,0 +1,56 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "686f8f0f841bc1ed991cd7d79c21108b",
+    "content-hash": "4bd9d30daa79ae7348fb03f1f707bc94",
+    "packages": [
+        {
+            "name": "asan/phpexcel",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Janson-Leung/PHPExcel.git",
+                "reference": "07ddc15b44c1f3ee967ded35cffeab5fec49a215"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Janson-Leung/PHPExcel/zipball/07ddc15b44c1f3ee967ded35cffeab5fec49a215",
+                "reference": "07ddc15b44c1f3ee967ded35cffeab5fec49a215",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Asan\\PHPExcel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Janson Leung",
+                    "homepage": "https://github.com/Janson-Leung"
+                }
+            ],
+            "description": "A lightweight PHP library for reading spreadsheet files",
+            "homepage": "https://github.com/Janson-Leung/PHPExcel",
+            "time": "2018-07-23 01:42:26"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

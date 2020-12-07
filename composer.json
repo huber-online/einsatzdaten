@@ -1,0 +1,5 @@
+{
+    "require": {
+        "asan/phpexcel": "^2.0"
+    }
+}
