@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1c10b47-6eec-45b3-8c2f-96a1a61a1acf" name="Default Changelist" comment="Import Tabelle user und Integration in mongo collection mitglieder">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/brels.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/brels.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/import/getuserdata.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/getuserdata.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/import/importuser.php" beforeDir="false" afterPath="$PROJECT_DIR$/import/importuser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/import/user.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/import/user.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,10 +14,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/asan/phpexcel" />
+    </include_path>
   </component>
   <component name="ProjectId" id="1lKEgKueIMZ3wEjTzUiTgifVMFp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -48,7 +55,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607337492338</updated>
-      <workItem from="1607337493457" duration="6674000" />
+      <workItem from="1607337493457" duration="6744000" />
+      <workItem from="1607354836659" duration="610000" />
     </task>
     <task id="LOCAL-00001" summary="initial Commit">
       <created>1607338181512</created>
@@ -57,7 +65,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607338181512</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Import Tabelle user und Integration in mongo collection mitglieder">
+      <created>1607345199882</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607345199882</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +100,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

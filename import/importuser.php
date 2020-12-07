@@ -46,6 +46,8 @@ foreach ($reader as $row) {
        $ins['id'] = (int)$row[0];
        $ins['username'] = (string)$row[1];
        $ins['osid'] = (int)$row[2];
+       $ins['usergroup'] = (int)$row[3];
+       $ins['usergroupname'] = (string)$row[4];
        $_mitglieder->update(['id'=>$ins['id']],['$set'=>$ins],['upsert'=>true]);
    }
    ++$rows;

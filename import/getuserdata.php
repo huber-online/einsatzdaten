@@ -17,7 +17,7 @@ $a = requestCurl("https://bergrettung.tirol/php/pw.php",["username"=>'h.ulli',"p
 if (preg_match("/Intranet Bergrettung Tirol/",$a))
 {
 
-	$pdata = ['Execute'=>'action','exportQuery.id'=>37,'exportQuery.name'=>'Export_User','exportQuery.query'=>"SELECT u.usernr,u.username,m.locale_office_id FROM user u INNER JOIN mr_member m ON u.usernr = m.member_id WHERE u.active = 'yes';",'exportQuery.description'=>''];
+	$pdata = ['Execute'=>'action','exportQuery.id'=>37,'exportQuery.name'=>'Export_User','exportQuery.query'=>"SELECT u.usernr,u.username,m.locale_office_id,g.usergroup_id,g.name FROM user u INNER JOIN mr_member m ON u.usernr = m.member_id  LEFT JOIN usergroup_map gm ON u.usernr = gm.user_id LEFT JOIN  usergroup g ON gm.usergroup_id = g.usergroup_id WHERE u.active = 'yes';",'exportQuery.description'=>''];
 	if ($c = requestCurl('https://bergrettung.tirol/MountainRescue/QueryView.action?Edit=action&exportQuery.id=37')) {
             if ($xls = requestCurl('https://bergrettung.tirol/MountainRescue/QueryView.action',$pdata,true)) {
 /*                $xls = preg_replace("/^HTTP.*Content-Length: \d+/s","",$xls);*/
