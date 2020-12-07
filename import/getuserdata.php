@@ -19,13 +19,14 @@ if (preg_match("/Intranet Bergrettung Tirol/",$a))
 
 	$pdata = ['Execute'=>'action','exportQuery.id'=>37,'exportQuery.name'=>'Export_User','exportQuery.query'=>"SELECT u.usernr,u.username,m.locale_office_id FROM user u INNER JOIN mr_member m ON u.usernr = m.member_id WHERE u.active = 'yes';",'exportQuery.description'=>''];
 	if ($c = requestCurl('https://bergrettung.tirol/MountainRescue/QueryView.action?Edit=action&exportQuery.id=37')) {
-            if ($xls = requestCurl('https://bergrettung.tirol/MountainRescue/QueryView.action',$pdata)) {
+            if ($xls = requestCurl('https://bergrettung.tirol/MountainRescue/QueryView.action',$pdata,true)) {
+/*                $xls = preg_replace("/^HTTP.*Content-Length: \d+/s","",$xls);*/
                 file_put_contents('user.xlsx',$xls);
             }
         }
 }
 
-function requestCurl( $query,$data=null ) {
+function requestCurl( $query,$data=null,$download=false) {
     $ch = curl_init( $query );
     if ($data != null){
         curl_setopt($ch,CURLOPT_HEADER,true);
@@ -46,9 +47,17 @@ function requestCurl( $query,$data=null ) {
     //curl_setopt($ch, CURLOPT_SSLVERSION, 2);
     curl_setopt ($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0');
 
+
     if( !$data = curl_exec( $ch )) {
         echo 'Curl execution error.', curl_error( $ch ) ."\n";
         return false;
+    }
+    if ($download) {
+        $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+        $header = substr($data, 0, $header_size);
+        $body = substr($data, $header_size);
+        $header_items = explode("\n", $header);
+        $data = $body;
     }
     curl_close( $ch );
     return $data;

@@ -20,7 +20,7 @@ require dirname(__DIR__,1) . '/vendor/autoload.php';
 $_mitglieder = new Mongo();
 $_mitglieder->setCollection('mitglieder');
 echo "Read Inputfile ...".PHP_EOL;
-$reader = Asan\PHPExcel\Excel::load('mitglieder.xlsx',function(Asan\PHPExcel\Reader\Xlsx $reader) {
+$reader = Asan\PHPExcel\Excel::load('user.xlsx',function(Asan\PHPExcel\Reader\Xlsx $reader) {
    $reader->setSheetIndex(0);
 
 });
@@ -43,9 +43,9 @@ foreach ($reader as $row) {
    else
    {
        $ins = [];
-       $ins['id'] = (int)$row['usernr'];
-       $ins['username'] = (string)$row['Benutzername'];
-       $ins['osid'] = (int)$row['locale_office_id'];
+       $ins['id'] = (int)$row[0];
+       $ins['username'] = (string)$row[1];
+       $ins['osid'] = (int)$row[2];
        $_mitglieder->update(['id'=>$ins['id']],['$set'=>$ins],['upsert'=>true]);
    }
    ++$rows;
